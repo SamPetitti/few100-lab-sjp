@@ -9,78 +9,62 @@
           crossorigin="anonymous">
     <title>Tip Calculator</title>
 </head>
+<main>
 
-<body>
-    <header>
+    <body>
         <div class="container">
-            <h1 class="text-dark">Tip Calculator</h1>
+            <header>
+                <h1 class="text-dark">Tip Calculator</h1>
+            </header>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text">$</span>
                 </div>
-                <input type="text"
+                <input type="number"
+                       id="enter"
                        class="form-control"
-                       aria-label="Amount (to the nearest dollar)">
+                       aria-label="Amount (to the nearest dollar)"
+                       placeholder="0">
             </div>
             <div class="btn-group btn-group-toggle"
                  data-toggle="buttons">
-                <label class="btn btn-secondary active">
+                <label class="btn btn-secondary">
                     <input type="radio"
-                           name="options"
-                           id="option1"
+                           class='tipButton'
+                           name="15"
+                           id="15per"
                            autocomplete="off"
-                           checked> Active
+                           checked>15%
                 </label>
                 <label class="btn btn-secondary">
                     <input type="radio"
-                           name="options"
-                           id="option2"
-                           autocomplete="off"> Radio
+                           class='tipButton'
+                           name="18"
+                           id="18per"
+                           autocomplete="off">18%
                 </label>
                 <label class="btn btn-secondary">
                     <input type="radio"
-                           name="options"
-                           id="option3"
-                           autocomplete="off"> Radio
+                           class='tipButton'
+                           name="20"
+                           id="20per"
+                           autocomplete="off">20%
                 </label>
             </div>
             <div>You are tipping 15%</div>
+            <ul class="list-group">
+                <li id="billAmount"
+                    class="list-group-item">Bill Amount:</li>
+                <li id="tipPercentage"
+                    class="list-group-item">Tip Percentage:</li>
+                <li id="amountToTip"
+                    class="list-group-item">Amount of Tip:</li>
+                <li id="total"
+                    class="list-group-item"><i>Total to be paid:</i></li>
+            </ul>
 
-            <div class="input-group">
-                <input type="text"
-                       class="form-control"
-                       placeholder="Bill Amount:"
-                       aria-label="Bill Amount"
-                       aria-describedby="basic-addon1">
 
-            </div>
-            <div class="input-group-append">
-                <input type="text"
-                       class="form-control"
-                       placeholder="Tip Percentage:"
-                       aria-label="Tip Percentage"
-                       aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group-append">
-                <input type="text"
-                       class="form-control"
-                       placeholder="Amount of tip"
-                       aria-label="Amount of tip"
-                       aria-describedby="basic-addon1">
-            </div>
-            <div class="input-group-append">
-                <input type="text"
-                       class="form-control"
-                       placeholder="Total to be Paid"
-                       aria-label="Total"
-                       aria-describedby="basic-addon1">
-            </div>
-        </div>
-
-    </header>
-    <main>
-
-    </main>
-</body>
+    </body>
+</main>
 
 </html>
