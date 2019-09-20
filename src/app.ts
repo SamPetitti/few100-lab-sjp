@@ -50,40 +50,4 @@ function setCurrentTipAmount() {
     });
 }
 
-// export function runApp() {
-//     // we are going to need a secret number 1 - 6
-//     const secretNumber = getRandomInt(1, 6);
-//     // mark one of the squares as the secret square.
-//     squares = document.querySelectorAll('.square');
-//     const playButton = document.getElementById('playAgain');
-//     playButton.addEventListener('click', playAgain);
-//     let currentSquare = 1;
-//     squares.forEach((sq: HTMLDivElement) => {
-//         if (currentSquare === secretNumber) {
-//             sq.dataset.winner = 'true';
-//         }
-//         currentSquare++;
-//         sq.addEventListener('click', handleClick);
-//     });
-// }
 
-
-
-// function handleClick() {
-//     const isWinner = this.dataset.winner === 'true';
-//     const clickedSquare = this as HTMLDivElement;
-//     if (isWinner) {
-//         clickedSquare.classList.add('winner');
-//         gameHeader.innerText = 'YOU WIN!';
-
-//         squares.forEach(s => {
-//             if (s !== clickedSquare) {
-//                 s.classList.add('loser');
-//             }
-//             s.removeEventListener('click', handleClick);
-//         });
-//     } else {
-//         clickedSquare.classList.add('loser');
-//         gameHeader.innerText = 'LOSER!!';
-//     }
-// }
