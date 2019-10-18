@@ -22,6 +22,7 @@
                 </div>
                 <input type="number"
                        id="enter"
+                       pattern="^\d*(\.\d{0,2})?$"
                        class="form-control"
                        aria-label="Amount (to the nearest dollar)"
                        placeholder="0">
@@ -34,16 +35,16 @@
                            name="15"
                            id="15per"
                            autocomplete="off"
-                           checked>15%
+                           disabled>15%
                 </label>
-                <label class="btn btn-secondary">
+                <label class="btn btn-secondary active">
                     <input type="radio"
                            class='tipButton'
                            name="18"
                            id="18per"
                            autocomplete="off">18%
                 </label>
-                <label class="btn btn-secondary">
+                <label class="btn btn-secondary active">
                     <input type="radio"
                            class='tipButton'
                            name="20"
@@ -51,10 +52,10 @@
                            autocomplete="off">20%
                 </label>
             </div>
-            <div>You are tipping 15%</div>
+            <div id="tipMessage">You are tipping 15%</div>
             <ul class="list-group">
                 <li id="billAmount"
-                    class="list-group-item">Bill Amount:</li>
+                    class="list-group-item">Bill Amount: 0</li>
                 <li id="tipPercentage"
                     class="list-group-item">Tip Percentage:</li>
                 <li id="amountToTip"
