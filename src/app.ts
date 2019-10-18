@@ -19,7 +19,6 @@ function calculateTip() {
         totalEntered = 0.00;
     } else {
         if (totalEntered < 0) {
-            // tslint:disable-next-line: quotemark
             enterAmountBox.classList.add('border', 'border-danger');
             totalEntered = 0.00;
         } else {
@@ -28,7 +27,7 @@ function calculateTip() {
         }
     }
     updateBillAmount(totalEntered);
-    const amountToTip: number = (Number(totalEntered) * Number(currentTipAmount) * .01);
+    const amountToTip: number = totalEntered * currentTipAmount * .01;
 
     document.getElementById('amountToTip').innerText = `Amount of Tip: $${amountToTip.toFixed(2)}`;
     const total = Number(amountToTip + totalEntered);
@@ -57,7 +56,6 @@ function setCurrentTipAmount() {
     tipButtons.forEach(x => {
         if (x.hasAttribute('disabled')) {
             currentTipAmount = x.name;
-            console.log(currentTipAmount + 'currentTipAmount');
             const tipPercentageBox = document.getElementById('tipPercentage');
             tipPercentageBox.innerText = `Tip Percentage: ${currentTipAmount}%`;
         }
