@@ -3,6 +3,7 @@ let currentTipAmount: any = 15;
 const billAmount = document.getElementById('billAmount');
 const enterAmountBox = document.getElementById('enter');
 const tipMessage = document.getElementById('tipMessage');
+
 export function runApp() {
     enterAmountBox.addEventListener('input', calculateTip);
     tipButtons = document.querySelectorAll('.tipButton');
